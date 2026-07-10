@@ -1,0 +1,1 @@
+# Viernes-10-de-julio-del-2026---carta-VI-
