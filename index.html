@@ -1,127 +1,400 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>✦ Donde Siempre Vuelve Mi Corazón ✦</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-    body{
-        margin:0;
-        padding:0;
-        background:#1a1410;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        font-family:"Garamond", serif;
-        color:#2b1d14;
-    }
 
-    .book-page{
-        width:800px;
-        min-height:100vh;
-        background:linear-gradient(135deg,#f5ecd8,#e8dcc0);
-        padding:60px 70px;
-        box-shadow:0 0 40px rgba(0,0,0,0.6);
-        position:relative;
-        border:2px solid #c2a878;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .ornament-top,
-    .ornament-bottom{
-        text-align:center;
-        font-size:18px;
-        letter-spacing:6px;
-        color:#7a5c3b;
-    }
+body{
 
-    .chapter-title{
-        text-align:center;
-        margin-top:30px;
-        font-size:22px;
-        letter-spacing:2px;
-    }
+background:
+radial-gradient(circle at top,#3f2f20 0%,#241b14 45%,#17110d 100%);
 
-    .meta{
-        text-align:center;
-        margin-top:10px;
-        font-size:14px;
-        opacity:.8;
-    }
+font-family:'Cormorant Garamond',serif;
 
-    .content{
-        margin-top:60px;
-        min-height:300px;
-        border:1px dashed #b79a6b;
-        padding:20px;
-        text-align:center;
-        line-height:1.8;
-        font-size:16px;
-        font-style:italic;
-    }
+display:flex;
+justify-content:center;
+align-items:center;
 
-    .status{
-        text-align:center;
-        margin-top:40px;
-        font-style:italic;
-        color:#6b4e2e;
-    }
+min-height:100vh;
 
-    .seal{
-        margin:50px auto 0;
-        width:70px;
-        height:70px;
-        border-radius:50%;
-        background:#7b2e2e;
-        border:3px solid #d4af7a;
-        box-shadow:inset 0 0 10px rgba(0,0,0,.5);
-    }
+padding:45px;
 
-    .page-number{
-        position:absolute;
-        right:30px;
-        bottom:20px;
-        font-size:14px;
-        color:#7a5c3b;
-    }
+}
+
+.book-page{
+
+position:relative;
+
+width:min(900px,100%);
+
+background:
+
+linear-gradient(180deg,#f7eedc 0%,#efe2c6 50%,#ead8b8 100%);
+
+border:2px solid #c4ab78;
+
+box-shadow:
+
+0 0 60px rgba(0,0,0,.55),
+
+inset 0 0 80px rgba(123,93,52,.10);
+
+padding:70px 70px 130px;
+
+overflow:hidden;
+
+}
+
+.book-page::before{
+
+content:"";
+
+position:absolute;
+
+top:18px;
+left:18px;
+right:18px;
+bottom:18px;
+
+border:1px solid rgba(147,110,58,.35);
+
+pointer-events:none;
+
+}
+
+.book-page::after{
+
+content:"❦";
+
+position:absolute;
+
+top:26px;
+right:28px;
+
+font-size:30px;
+
+color:#b59a67;
+
+opacity:.45;
+
+}
+
+.ornament{
+
+text-align:center;
+
+font-size:24px;
+
+letter-spacing:8px;
+
+color:#8d6942;
+
+margin-bottom:25px;
+
+}
+
+.book-title{
+
+text-align:center;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+color:#6b4d2b;
+
+margin-bottom:18px;
+
+text-transform:uppercase;
+
+}
+
+.chapter{
+
+text-align:center;
+
+font-size:34px;
+
+font-weight:600;
+
+letter-spacing:3px;
+
+color:#4f3620;
+
+margin-bottom:12px;
+
+}
+
+.date{
+
+text-align:center;
+
+font-size:17px;
+
+letter-spacing:1px;
+
+color:#7d5c37;
+
+margin-bottom:50px;
+
+}
+
+.content{
+
+border:1px dashed rgba(149,113,63,.45);
+
+padding:45px 35px;
+
+text-align:center;
+
+line-height:2;
+
+font-size:22px;
+
+color:#5b4227;
+
+font-style:italic;
+
+background:rgba(255,255,255,.12);
+
+}
+
+.content strong{
+
+font-size:24px;
+
+font-style:normal;
+
+}
+
+#countdown{
+
+margin-top:35px;
+
+font-size:42px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+color:#7a2d2d;
+
+text-shadow:0 0 8px rgba(122,45,45,.15);
+
+}
+
+.count-text{
+
+margin-top:18px;
+
+font-size:18px;
+
+font-style:normal;
+
+color:#705232;
+
+}
+
+.status{
+
+margin-top:45px;
+
+text-align:center;
+
+font-size:18px;
+
+line-height:1.9;
+
+font-style:italic;
+
+color:#6d5030;
+
+}
+
+.seal{
+
+margin:55px auto 0;
+
+width:78px;
+
+height:78px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle at 30% 30%,#a43b3b,#6d1919 70%);
+
+border:4px solid #d5b37a;
+
+box-shadow:
+
+0 8px 15px rgba(0,0,0,.25),
+
+inset 0 0 12px rgba(255,255,255,.15);
+
+}
+
+.page-number{
+
+position:absolute;
+
+bottom:28px;
+
+right:42px;
+
+font-size:17px;
+
+letter-spacing:2px;
+
+color:#765636;
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="book-page">
 
-    <div class="ornament-top">
-        ✦ ❦ ✦ ❦ ✦ ❦ ✦
-    </div>
+<div class="ornament">
 
-    <div class="chapter-title">
-        Capítulo VI
-    </div>
-
-    <div class="meta">
-        Viernes 10 de julio de 2026 • Noche
-    </div>
-
-    <div class="content">
-        <strong>Página en proceso de escritura...</strong>
-    </div>
-
-    <div class="status">
-        ✎ Capítulo en construcción dentro del antiguo libro <br>
-        <em>✦ Donde Siempre Vuelve Mi Corazón ✦</em>
-    </div>
-
-    <div class="seal"></div>
-
-    <div class="page-number">
-        ❦ &nbsp; VI &nbsp; ❦
-    </div>
-
-    <div class="ornament-bottom">
-        ✦ ❦ ✦ ❦ ✦ ❦ ✦
-    </div>
+✦ ❦ ✦ ❦ ✦ ❦ ✦
 
 </div>
 
+<div class="book-title">
+
+✦ Donde Siempre Vuelve Mi Corazón ✦
+
+</div>
+
+<div class="chapter">
+
+Capítulo VI
+
+</div>
+
+<div class="date">
+
+Viernes 10 de julio de 2026 • Noche
+
+</div>
+
+<div class="content">
+
+<strong>
+
+Las páginas del siguiente capítulo aún descansan bajo el silencio de este antiguo libro...
+
+</strong>
+
+<br><br>
+
+Cada segundo acerca el instante en que la tinta volverá a despertar para escribir una nueva noche de nuestra historia.
+
+<div id="countdown">
+
+00:00:00
+
+</div>
+
+<div class="count-text">
+
+Tiempo restante para que el siguiente capítulo sea revelado.
+
+</div>
+
+</div>
+
+<div class="status">
+
+✦ Mientras el reloj avanza, el libro continúa escribiendo en secreto aquello que el corazón aún no ha confesado. ✦
+
+</div>
+
+<div class="seal"></div>
+
+
+<div class="page-number">
+
+❦ &nbsp; VI &nbsp; ❦
+
+</div>
+
+</div>
+
+<script>
+
+const fechaObjetivo = new Date("2026-07-10T22:10:00");
+
+function actualizarContador(){
+
+    const ahora = new Date();
+
+    const diferencia = fechaObjetivo.getTime() - ahora.getTime();
+
+    if(diferencia <= 0){
+
+        document.getElementById("countdown").innerHTML = "✦ Ya disponible ✦";
+
+        return;
+
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    let texto = "";
+
+    if(dias > 0){
+
+        texto += String(dias).padStart(2,"0") + "d ";
+
+    }
+
+    texto +=
+        String(horas).padStart(2,"0") + ":" +
+        String(minutos).padStart(2,"0") + ":" +
+        String(segundos).padStart(2,"0");
+
+    document.getElementById("countdown").textContent = texto;
+
+}
+
+actualizarContador();
+
+setInterval(actualizarContador,1000);
+
+        </script>
+
+
 </body>
-</html> 
+
+</html>
