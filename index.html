@@ -7,394 +7,894 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>✦ Donde Siempre Vuelve Mi Corazón ✦</title>
+<title></title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 body{
 
 background:
-radial-gradient(circle at top,#3f2f20 0%,#241b14 45%,#17110d 100%);
-
-font-family:'Cormorant Garamond',serif;
-
-display:flex;
-justify-content:center;
-align-items:center;
+radial-gradient(circle at center,#5c4327 0%,#352112 45%,#170d08 100%);
 
 min-height:100vh;
 
-padding:45px;
+font-family:'Cormorant Garamond',serif;
+
+padding:60px 20px;
+
+overflow-x:hidden;
 
 }
 
-.book-page{
+/* Mesa */
 
-position:relative;
-
-width:min(900px,100%);
-
-background:
-
-linear-gradient(180deg,#f7eedc 0%,#efe2c6 50%,#ead8b8 100%);
-
-border:2px solid #c4ab78;
-
-box-shadow:
-
-0 0 60px rgba(0,0,0,.55),
-
-inset 0 0 80px rgba(123,93,52,.10);
-
-padding:70px 70px 130px;
-
-overflow:hidden;
-
-}
-
-.book-page::before{
+body::before{
 
 content:"";
 
-position:absolute;
+position:fixed;
 
-top:18px;
-left:18px;
-right:18px;
-bottom:18px;
+inset:0;
 
-border:1px solid rgba(147,110,58,.35);
+background:
+
+repeating-linear-gradient(
+90deg,
+rgba(255,255,255,.015),
+rgba(255,255,255,.015) 3px,
+transparent 3px,
+transparent 80px
+);
+
+opacity:.35;
 
 pointer-events:none;
 
 }
 
-.book-page::after{
+/* Libro */
 
-content:"❦";
+.book{
+
+max-width:950px;
+
+margin:auto;
+
+background:#4b2816;
+
+border-radius:18px;
+
+padding:28px;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.65);
+
+border:6px solid #8f693d;
+
+position:relative;
+
+}
+
+/* Grabado dorado */
+
+.cover-title{
+
+text-align:center;
+
+font-family:'Cinzel',serif;
+
+font-size:2rem;
+
+color:#f7d98d;
+
+letter-spacing:3px;
+
+text-shadow:
+
+0 2px 0 #7b582c,
+0 0 12px rgba(255,217,141,.35);
+
+margin-bottom:22px;
+
+}
+
+/* Página */
+
+.page{
+
+background:
+
+linear-gradient(#f9f0d9,#efe1bf);
+
+border-radius:10px;
+
+padding:65px;
+
+position:relative;
+
+box-shadow:
+
+inset 0 0 30px rgba(0,0,0,.12);
+
+}
+
+/* Textura */
+
+.page::before{
+
+content:"";
 
 position:absolute;
 
-top:26px;
-right:28px;
+inset:0;
 
-font-size:30px;
+background-image:
 
-color:#b59a67;
+radial-gradient(rgba(90,70,40,.05) 1px,transparent 1px);
 
-opacity:.45;
+background-size:18px 18px;
 
-}
+opacity:.55;
 
-.ornament{
-
-text-align:center;
-
-font-size:24px;
-
-letter-spacing:8px;
-
-color:#8d6942;
-
-margin-bottom:25px;
+pointer-events:none;
 
 }
 
-.book-title{
+/* Filigranas */
 
-text-align:center;
+.corner{
 
-font-size:18px;
+position:absolute;
 
-letter-spacing:3px;
+font-size:44px;
 
-color:#6b4d2b;
+color:#b08a45;
 
-margin-bottom:18px;
-
-text-transform:uppercase;
+opacity:.7;
 
 }
 
-.chapter{
+.c1{
+
+top:15px;
+left:22px;
+
+}
+
+.c2{
+
+top:15px;
+right:22px;
+
+transform:rotate(90deg);
+
+}
+
+.c3{
+
+bottom:15px;
+left:22px;
+
+transform:rotate(-90deg);
+
+}
+
+.c4{
+
+bottom:15px;
+right:22px;
+
+transform:rotate(180deg);
+
+}
+
+/* Encabezado */
+
+.header{
 
 text-align:center;
 
-font-size:34px;
+margin-bottom:55px;
 
-font-weight:600;
+}
 
-letter-spacing:3px;
+.header h1{
 
-color:#4f3620;
+font-family:'Cinzel',serif;
 
-margin-bottom:12px;
+font-size:2rem;
+
+line-height:1.5;
+
+color:#5b3213;
+
+margin-bottom:22px;
 
 }
 
 .date{
 
-text-align:center;
+font-size:1rem;
 
-font-size:17px;
+color:#7b5c2e;
 
 letter-spacing:1px;
 
-color:#7d5c37;
-
-margin-bottom:50px;
-
 }
 
-.content{
+/* Saludo */
 
-border:1px dashed rgba(149,113,63,.45);
-
-padding:45px 35px;
-
-text-align:center;
-
-line-height:2;
-
-font-size:22px;
-
-color:#5b4227;
-
-font-style:italic;
-
-background:rgba(255,255,255,.12);
-
-}
-
-.content strong{
-
-font-size:24px;
-
-font-style:normal;
-
-}
-
-#countdown{
+.greeting{
 
 margin-top:35px;
 
-font-size:42px;
+font-family:'Great Vibes',cursive;
+
+font-size:3rem;
+
+color:#7b4323;
+
+margin-bottom:28px;
+
+}
+
+/* Texto */
+
+p{
+
+font-size:1.35rem;
+
+line-height:2.05;
+
+text-align:justify;
+
+color:#4d3520;
+
+margin-bottom:22px;
+
+}
+
+/* Letra capital */
+
+.first::first-letter{
+
+font-size:5rem;
+
+float:left;
+
+line-height:.9;
+
+padding-right:10px;
+
+font-family:'Cinzel',serif;
+
+color:#8d5a2d;
+
+}
+
+strong{
 
 font-weight:700;
 
-letter-spacing:4px;
-
-color:#7a2d2d;
-
-text-shadow:0 0 8px rgba(122,45,45,.15);
-
 }
 
-.count-text{
-
-margin-top:18px;
-
-font-size:18px;
-
-font-style:normal;
-
-color:#705232;
-
-}
-
-.status{
-
-margin-top:45px;
+.divider{
 
 text-align:center;
 
-font-size:18px;
+font-size:26px;
 
-line-height:1.9;
+margin:35px 0;
+
+color:#9b7643;
+
+}
+
+/* ========= PASAR LA PÁGINA ========= */
+
+.page-turn{
+
+margin:55px auto 25px;
+
+text-align:center;
+
+}
+
+.page-turn-text{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.25rem;
+
+color:#7a5b39;
+
+line-height:1.8;
+
+margin-bottom:28px;
 
 font-style:italic;
 
-color:#6d5030;
-
 }
 
-.seal{
+.page-corner{
 
-margin:55px auto 0;
+display:inline-flex;
 
-width:78px;
+align-items:center;
 
-height:78px;
+justify-content:center;
 
-border-radius:50%;
+width:170px;
 
-background:
+height:70px;
 
-radial-gradient(circle at 30% 30%,#a43b3b,#6d1919 70%);
+background:linear-gradient(145deg,#f8f0dc,#ead8b3);
 
-border:4px solid #d5b37a;
+border:2px solid #c9a36b;
 
-box-shadow:
+text-decoration:none;
 
-0 8px 15px rgba(0,0,0,.25),
+color:#6b4725;
 
-inset 0 0 12px rgba(255,255,255,.15);
+font-family:'Cinzel',serif;
 
-}
-
-.page-number{
-
-position:absolute;
-
-bottom:28px;
-
-right:42px;
-
-font-size:17px;
+font-size:.9rem;
 
 letter-spacing:2px;
 
-color:#765636;
+clip-path:polygon(0 0,100% 0,100% 75%,82% 100%,0 100%);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.18);
+
+transition:.35s;
 
 }
 
+.page-corner:hover{
+
+transform:translateY(-5px) rotate(-2deg);
+
+box-shadow:
+0 18px 35px rgba(0,0,0,.28);
+
+}
+
+.page-corner span{
+
+padding:0 12px;
+
+text-align:center;
+
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="book-page">
+<div class="book">
 
-<div class="ornament">
-
-✦ ❦ ✦ ❦ ✦ ❦ ✦
-
-</div>
-
-<div class="book-title">
+<div class="cover-title">
 
 ✦ Donde Siempre Vuelve Mi Corazón ✦
 
 </div>
 
-<div class="chapter">
+<div class="page">
 
-Capítulo VI
+<div class="corner c1">❦</div>
+<div class="corner c2">❦</div>
+<div class="corner c3">❦</div>
+<div class="corner c4">❦</div>
+
+<div class="header">
+
+
+<h1>CAPÍTULO VI</h1>
+
+<h3>DONDE EL AMOR HACE UN PACTO CON LA DISTANCIA Y PROMETE SOBREVIVIR HASTA EL ÚLTIMO LATIDO</h3>
+
+<p><strong>Mi niña hermosa:</strong></p>
+
+<p><strong>Viernes, 10 de julio del 2026 — Noche.</strong></p>
+
+<p>Esta noche el silencio pesa distinto.</p>
+
+<p>No porque el mundo esté más callado, sino porque tú no estás aquí.</p>
+
+<p>He intentado distraerme, mirar cualquier cosa, pensar en cualquier tema, pero todo termina llevándome al mismo lugar: a ti. Siempre a ti. Es como si mi corazón hubiera olvidado todos los caminos excepto el que conduce hasta tu nombre.</p>
+
+<p>Y duele.</p>
+
+<p>Duele de esa manera extraña en la que solo duele el amor cuando extraña demasiado. Duele despertar y saber que no puedo abrazarte. Duele dormir sin haber sentido tu mano entre las mías. Duele que los días sigan avanzando mientras yo cuento las horas para volver a verte.</p>
+
+<p>Jamás imaginé que una persona pudiera convertirse en tanta falta.</p>
+
+<p>Porque tú ya no eres solamente alguien a quien amo.</p>
+
+<p>Eres el lugar donde descansa mi alma.</p>
+
+<p>Eres la paz que extraño.</p>
+
+<p>Eres el hogar al que siempre quiero regresar.</p>
+
+<p>Y aunque intento ser fuerte, esta noche debo confesarte algo...</p>
+
+<p><strong>Te extraño muchísimo.</strong></p>
+
+<p>Muchísimo más de lo que las palabras alcanzan a explicar.</p>
+
+<p>Hay momentos en los que quisiera detener el reloj únicamente para que el tiempo dejara de separarnos. Otros en los que quisiera que la noche terminara antes solo para acercarme un día más al instante en que vuelva a verte.</p>
+
+<p>No importa cuántas veces cierre los ojos.</p>
+
+<p>Siempre apareces tú.</p>
+
+<p>Con esa sonrisa que parece inventada por Dios para arreglar mis días.</p>
+
+<p>Con esa mirada que consigue calmar todas mis tormentas.</p>
+
+<p>Con esa forma tan tuya de existir, que convirtió mi vida en un lugar infinitamente más hermoso.</p>
+
+<p>Y mientras te extraño, también aparece otro pensamiento que no deja de dar vueltas en mi cabeza.</p>
+
+<p><strong>Las ICFES.</strong></p>
+
+<p>Quizá para muchos sea solo un examen.</p>
+
+<p>Para mí también es importante, claro que sí.</p>
+
+<p>Pero hay algo que me pone realmente nervioso.</p>
+
+<p>Pensar que durante ese día no voy a poder escribirte como acostumbro.</p>
+
+<p>Pensar que pasarán tantas horas sin poder decirte un "te amo", un "¿cómo estás, mi amor?", un "espero que estés sonriendo".</p>
+
+<p>Y esa idea...</p>
+
+<p>Esa idea me enloquece un poco.</p>
+
+<p>Porque escribirte dejó de ser una costumbre hace mucho tiempo.</p>
+
+<p>Ahora es una necesidad.</p>
+
+<p>Es la manera en la que mi corazón respira cuando no puede abrazarte.</p>
+
+<p>Cada mensaje que te envío lleva un pedacito de mí.</p>
+
+<p>Cada palabra intenta hacerte compañía cuando no puedo hacerlo con mis brazos.</p>
+
+<p>Cada "te amo" busca acariciarte el alma aunque la distancia siga empeñada en separarnos.</p>
+
+<p>Por eso me pone nervioso.</p>
+
+<p>Porque siento que durante esas horas mi corazón tendrá demasiado que decirte y muy pocas oportunidades para hacerlo.</p>
+
+<p>Pero también sé algo.</p>
+
+<p>Cuando salga de ese examen, lo primero que querré hacer será buscarte.</p>
+
+<p>Escribirte.</p>
+
+<p>Contarte cómo me fue.</p>
+
+<p>Preguntarte cómo estuvo tu día.</p>
+
+<p>Volver a llenar nuestro chat de esas pequeñas cosas que para el mundo parecen simples, pero que para mí significan absolutamente todo.</p>
+
+<p>Porque hablar contigo nunca ha sido perder el tiempo.</p>
+
+<p>Hablar contigo siempre ha sido encontrarme.</p>
+
+<p>Y mientras escribo estas líneas, sonrío al pensar en nosotros.</p>
+
+<p>En todo lo que hemos construido.</p>
+
+<p>En todo lo que seguimos construyendo incluso cuando la distancia intenta hacernos creer que es difícil.</p>
+
+<p>Porque nuestro amor nunca ha necesitado facilidad.</p>
+
+<p>Ha necesitado valentía.</p>
+
+<p>Y de eso nos sobra.</p>
+
+<p><strong>Mi niña...</strong></p>
+
+<p>Si alguna vez alguien me preguntara cómo te amo, creo que respondería con una imagen que siempre me hace sonreír.</p>
+
+<p><strong>Yo te amo al estilo de la vieja mafia italiana.</strong></p>
+
+<p>No por la violencia que cuentan las historias.</p>
+
+<p>Sino por la lealtad que nunca negocia.</p>
+
+<p>Por esas promesas que no se rompen aunque el mundo entero intente comprarlas.</p>
+
+<p>Por ese "para siempre" que no necesita testigos porque basta con el honor de quien lo pronuncia.</p>
+
+<p>Así te amo.</p>
+
+<p>Con una lealtad que no conoce reemplazos.</p>
+
+<p>Con una devoción que no entiende de distancias.</p>
+
+<p>Con un compromiso silencioso que todos los días vuelve a elegirte sin necesidad de dudar un solo segundo.</p>
+
+<p>Si mi corazón perteneciera a una familia, tú serías el apellido que llevaría con orgullo hasta el último día de mi vida.</p>
+
+<p>Porque hay amores que simplemente pasan.</p>
+
+<p>Y luego está el nuestro.</p>
+
+<p>Ese que llegó para quedarse.</p>
+
+<p>Ese que aprendió a sobrevivir a los días difíciles.</p>
+
+<p>Ese que continúa creciendo incluso cuando los kilómetros intentan escribir otra historia.</p>
+
+<p>Contigo entendí que el verdadero amor no hace ruido.</p>
+
+<p>Permanece.</p>
+
+<p>Espera.</p>
+
+<p>Protege.</p>
+
+<p>Abraza.</p>
+
+<p>Perdona.</p>
+
+<p>Y vuelve a empezar todas las veces que haga falta.</p>
+
+<p>Eso quiero hacer siempre contigo.</p>
+
+<p>Elegirte una y otra vez.</p>
+
+<p>Sin importar si el día fue bueno o malo.</p>
+
+<p>Si estamos cerca o lejos.</p>
+
+<p>Si hablamos durante horas o apenas unos minutos.</p>
+
+<p>Porque mi decisión nunca cambia.</p>
+
+<p>Siempre eres tú.</p>
+
+<p>Y siempre lo serás.</p>
+
+<p>Esta noche cierro este capítulo imaginando el momento en que vuelva a tenerte frente a mí.</p>
+
+<p>No pienso en grandes viajes.</p>
+
+<p>No pienso en lujos.</p>
+
+<p>Solo imagino algo tan sencillo como volver a abrazarte.</p>
+
+<p>Sentir que el mundo deja de hacer ruido mientras escondo mi rostro entre tu cabello.</p>
+
+<p>Tomar tu mano.</p>
+
+<p>Mirarte a los ojos.</p>
+
+<p>Y decirte, sin ninguna prisa, exactamente lo que hoy vuelvo a escribirte:</p>
+
+<p>Gracias por existir.</p>
+
+<p>Gracias por convertirte en la historia más bonita que jamás pudo escribir mi vida.</p>
+
+<p>Gracias por enseñarme que el amor verdadero no se mide por la cantidad de días juntos, sino por la intensidad con la que dos corazones deciden esperarse.</p>
+
+<p>Y yo voy a esperarte todas las veces que haga falta.</p>
+
+<p>Voy a seguir escribiéndote mientras tenga palabras.</p>
+
+<p>Voy a seguir soñando contigo mientras tenga noches.</p>
+
+<p>Voy a seguir amándote mientras tenga vida.</p>
+
+<p>Y cuando ya no me queden fuerzas para decirlo con la voz...</p>
+
+<p>Espero que mi corazón siga pronunciando tu nombre en cada uno de sus latidos.</p>
+
+<p>Porque tú, mi niña hermosa...</p>
+
+<p>Eres el amor que escogería en esta vida, en la siguiente y en todas aquellas que Dios quisiera regalarme.</p>
+
+<p><strong>Con todo mi amor, con toda mi lealtad y con un corazón que siempre será tuyo.</strong></p>
+
+<p><strong>Te amo infinitamente, mi niña hermosa.</strong></p>
+
+</div>
+<hr style="
+margin:55px auto;
+width:82%;
+border:none;
+border-top:1px solid rgba(120,85,40,.35);
+">
+
+<style>
+
+/*==========================
+GRABADO FINAL
+==========================*/
+
+.book-quote{
+
+margin:0 auto 55px;
+
+max-width:760px;
+
+padding:28px 36px;
+
+border:2px solid rgba(176,138,69,.45);
+
+border-radius:10px;
+
+background:rgba(255,248,228,.45);
+
+position:relative;
+
+}
+
+.book-quote::before{
+
+content:"❦";
+
+position:absolute;
+
+top:-18px;
+left:50%;
+
+transform:translateX(-50%);
+
+background:#efe1bf;
+
+padding:0 14px;
+
+font-size:26px;
+
+color:#9b7643;
+
+}
+
+.book-quote p{
+
+margin:0;
+
+text-align:center;
+
+font-size:1.45rem;
+
+line-height:2;
+
+color:#6d3f72;
+
+font-family:'Cormorant Garamond',serif;
+
+text-shadow:
+
+0 0 6px rgba(171,92,255,.18);
+
+}
+
+</style>
+
+<div class="book-quote">
+
+<p> Hay amores que nacen para acompañar una vida; el mío nació para desafiar el tiempo, la distancia, el silencio y cada prueba del destino, porque incluso cuando el mundo intenta separarnos, mi corazón sigue encontrando el camino de regreso al tuyo... y si alguna vez el universo olvida cómo brillar, bastará con pronunciar tu nombre para que vuelva a amanecer dentro de mí. Eternamente tuyo, <strong>VALERIA PETRO VILLAZÓN</strong>.</p>
 
 </div>
 
-<div class="date">
 
-Viernes 10 de julio de 2026 • Noche
+<style>
+
+/*=========================================
+SELLO DE CERA
+=========================================*/
+
+.seal-container{
+
+display:flex;
+
+justify-content:center;
+
+margin:45px 0 15px;
+
+}
+
+.wax-seal{
+
+width:165px;
+height:165px;
+
+border-radius:50%;
+
+text-decoration:none;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding:18px;
+
+font-family:'Cinzel',serif;
+
+font-size:.82rem;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+color:#fff7ff;
+
+background:
+radial-gradient(circle at 35% 30%,
+#d88cff 0%,
+#a93fff 45%,
+#6d179f 75%,
+#4c0c74 100%);
+
+border:5px solid #f2d89d;
+
+box-shadow:
+0 12px 25px rgba(0,0,0,.35),
+inset 0 3px 10px rgba(255,255,255,.25),
+inset 0 -8px 15px rgba(0,0,0,.25);
+
+transition:.35s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.wax-seal::before{
+
+content:"";
+
+position:absolute;
+
+width:210px;
+height:40px;
+
+background:rgba(255,255,255,.22);
+
+transform:rotate(-35deg);
+
+top:18px;
+left:-60px;
+
+}
+
+.wax-seal:hover{
+
+transform:scale(1.08) rotate(-2deg);
+
+box-shadow:
+0 20px 35px rgba(0,0,0,.45);
+
+}
+
+.ribbon{
+
+width:6px;
+
+height:95px;
+
+background:linear-gradient(#b3884d,#f4dca6,#b3884d);
+
+margin:0 auto;
+
+border-radius:5px;
+
+}
+
+.end-message{
+
+margin-top:28px;
+
+text-align:center;
+
+font-family:'Great Vibes',cursive;
+
+font-size:2.3rem;
+
+color:#7b4323;
+
+}
+
+.page-number{
+
+margin-top:40px;
+
+text-align:center;
+
+font-family:'Cinzel',serif;
+
+font-size:.95rem;
+
+letter-spacing:5px;
+
+color:#9a7742;
+
+}
+
+</style>
+
+<div class="seal-container">
+
+<a
+class="wax-seal"
+target="_blank"
+href="https://j8753741-eng.github.io/Miercoles-8-de-julio-del-2026---poema/">
+
+📜<br>
+
+ABRIR EL<br>
+
+POEMA DE<br>
+
+ESTA NOCHE
+
+</a>
+<div class="page-turn">
+
+    <p class="page-turn-text">
+
+        <strong>La tinta aún no ha descansado...</strong><br>
+
+        El próximo capítulo ya espera el momento de volver a encontrarte.
+    </p>
+
+    <a href="https://j8753741-eng.github.io/Jueves-9-de-julio-del-2026---carta-cap-IV-/" class="page-corner">
+
+        <span>✦ Pasar la página ✦</span>
+
+    </a>
 
 </div>
+</div>
 
-<div class="content">
+<div class="ribbon"></div>
+
+<div class="end-message">
 
 <strong>
-
-Las páginas del siguiente capítulo aún descansan bajo el silencio de este antiguo libro...
-
+Mientras este libro conserve una sola página en blanco, siempre habrá una nueva manera de decirte cuánto te amo.
 </strong>
 
-<br><br>
-
-Cada segundo acerca el instante en que la tinta volverá a despertar para escribir una nueva noche de nuestra historia.
-
-<div id="countdown">
-
-00:00:00
-
 </div>
-
-<div class="count-text">
-
-Tiempo restante para que el siguiente capítulo sea revelado.
-
-</div>
-
-</div>
-
-<div class="status">
-
-✦ Mientras el reloj avanza, el libro continúa escribiendo en secreto aquello que el corazón aún no ha confesado. ✦
-
-</div>
-
-<div class="seal"></div>
-
 
 <div class="page-number">
 
 ❦ &nbsp; VI &nbsp; ❦
 
-</div>
 
 </div>
 
-<script>
+</div>
 
-const fechaObjetivo = new Date("2026-07-10T22:10:00");
-
-function actualizarContador(){
-
-    const ahora = new Date();
-
-    const diferencia = fechaObjetivo.getTime() - ahora.getTime();
-
-    if(diferencia <= 0){
-
-        document.getElementById("countdown").innerHTML = "✦ Ya disponible ✦";
-
-        return;
-
-    }
-
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-    let texto = "";
-
-    if(dias > 0){
-
-        texto += String(dias).padStart(2,"0") + "d ";
-
-    }
-
-    texto +=
-        String(horas).padStart(2,"0") + ":" +
-        String(minutos).padStart(2,"0") + ":" +
-        String(segundos).padStart(2,"0");
-
-    document.getElementById("countdown").textContent = texto;
-
-}
-
-actualizarContador();
-
-setInterval(actualizarContador,1000);
-
-        </script>
-
+</div>
 
 </body>
 
-</html>
+    </html>
